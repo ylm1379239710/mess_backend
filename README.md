@@ -1,4 +1,4 @@
-# Echo — 开源社区系统
+# Mess — echo基础上开发的交易信息系统
 
 ---
 
@@ -7,21 +7,6 @@
 <p align="center">
     <img width="" src="https://gitee.com/veal98/images/raw/master/img/20210211175136.png" >
 </p>
-
-<div align="center">
-
-
-[![star](https://gitee.com/veal98/Echo/badge/star.svg?theme=dark)](https://gitee.com/veal98/Echo/stargazers)
-[![fork](https://gitee.com/veal98/Echo/badge/fork.svg?theme=dark)](https://gitee.com/veal98/Echo/members)
-[![GitHub stars](https://img.shields.io/github/stars/Veal98/Echo?logo=github)](https://github.com/Veal98/Echo/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Veal98/Echo?logo=github)](https://github.com/Veal98/Echo/network)
-[![version](https://img.shields.io/badge/version-2.1-brightgreen)]()
-
-<a href="#-微信交流群"><img src="https://img.shields.io/badge/交流-微信群-orange" alt="交流群"></a>
-<a href="#-配套教程"><img src="https://img.shields.io/badge/配套教程-公众号飞天小牛肉-blueviolet" alt="配套教程"></a>
-
-
-</div>
 
 > 云服务器到期了，暂时不准备续费，未上手的小伙伴可以看下面的界面展示了解本项目，所有代码在我本机上都是正常运行的，各位可以参考配套教程自己拉下去部署，并欢迎加群讨论技术问题。
 
@@ -66,7 +51,9 @@ Echo 是一套前后端不分离的开源社区系统，基于目前主流 Java 
 - 日志：SLF4J（日志接口） + Logback（日志实现）
 
 前端：
+我自己的话是把前端改成了VUE+element UI
 
+原本是：
 - Thymeleaf
 - Bootstrap 4.x
 - Jquery
@@ -457,25 +444,3 @@ double score = Math.log10(Math.max(w, 1))
 ```
 
 ![](https://gitee.com/veal98/images/raw/master/img/20210208173636.png)
-
-
-## 🙋 微信交流群
-
-下方扫码关注公众号回复 `Echo`，里面有我的联系方式，备注 "Echo" 加我微信，我拉你进 Echo 微信交流群，实时跟进项目进度，第一时间获取教程更新，分享您的想法，还能帮您解决遇到的问题：
-
-<img width="220px" src="https://gitee.com/veal98/images/raw/master/img/20210204145531.png"  />
-
-## 👏 鸣谢
-
-若发现 Bug 或好的想法可以积极与我联系或提 PR / issue，采纳后您将出现在下方列表中。感谢以下小伙伴对本项目做出的贡献，排名按照时间先后：
-
-- [freedom_dh](https://gitee.com/dh_free)
-- [paulisusu](https://gitee.com/paulisusu)
-- [Max (Lyingfromyou)](https://gitee.com/Lyingfromyou)
-- [逆光影者 (cpfree) ](https://gitee.com/cpfree)
-
-> 🔗 友情链接（若您想要出现在这里，可以上方扫描微信二维码联系我）：
->
-> - [CS-Wiki](https://gitee.com/veal98/CS-Wiki)：致力打造完善的 Java 后端知识体系，不仅仅帮助各位小伙伴快速且系统的准备面试，更指引学习的方向
-> - [Furion](https://gitee.com/dotnetchina/Furion)：让 .NET 开发更简单，更通用，更流行 
-> - [Free-Fs](https://gitee.com/dh_free/free-fs)：Spring Boot 开源云文件管理系统，方便快捷的管理云存储的文件
