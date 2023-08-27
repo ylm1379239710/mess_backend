@@ -5,7 +5,7 @@
 <br>
 
 <p align="center">
-    <img width="" src="https://gitee.com/veal98/images/raw/master/img/20210211175136.png" >
+    <img width="" src="https://gitee.com/yang-luming321/mes-front-end/raw/master/src/assets/img/logoimg.png" >
 </p>
 
 
