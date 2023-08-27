@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greate.community.dao.DiscussPostMapper">
+
+    <resultMap id="discussPostMap" type="DiscussPost">
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        <result column="content" property="content" jdbcType="VARCHAR" />
+        <result column="type" property="type" jdbcType="INTEGER" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="comment_count" property="commentCount" jdbcType="INTEGER" />
+        <result column="score" property="score" jdbcType="VARCHAR" />
+        <result column="cover_img" property="coverImg" jdbcType="VARCHAR" />
+        <result column="summary" property="summary" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="allColumns">
+        dp.id, dp.user_id, dp.title, dp.content, dp.type, dp.status, dp.create_time, dp.comment_count,
+        dp.score, dp.cover_img, dp.summary
+    </sql>
+
+    <sql id = "selectFields">
+        id, user_id, title, content, type, status, create_time, comment_count, score
+    </sql>
+
+    <sql id = "insertFields">
+        user_id, title, content, type, status, create_time, comment_count, score
+    </sql>
+
+    <!--分页查询讨论贴信息-->
+    <!--不显示拉黑的帖子, 按照是否置顶和创建时间排序-->
+    <select id = "selectDiscussPosts" resultType="DiscussPost">
+        select <include refid="selectFields"></include>
+        from discuss_post
+        where status != 2
+        <if test = "userId!=0">
+            and user_id = #{userId}
+        </if>
+        <if test = "orderMode == 0">
+            order by type desc, create_time desc
+        </if>
+        <if test = "orderMode == 1">
+            order by type desc, score desc, create_time desc
+        </if>
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--查询讨论贴的个数-->
+    <select id = "selectDiscussPostRows" resultType="int">
+        select count(id)
+        from discuss_post
+        where status != 2
+        <if test = "userId != 0">
+            and user_id = #{userId}
+        </if>
+    </select>
+
+    <!--插入/添加帖子-->
+    <insert id="insertDiscussPost" parameterType="DiscussPost" keyProperty="id">
+        insert into discuss_post (<include refid="insertFields"></include>)
+        values(#{userId}, #{title}, #{content}, #{type}, #{status}, #{createTime}, #{commentCount}, #{score})
+    </insert>
+
+    <!--根据 id 查询帖子-->
+    <select id = "selectDiscussPostById" resultType="DiscussPost">
+        select *
+        from discuss_post
+        where id = #{id}
+    </select>
+
+    <select id="findDiscussPostByCondition" resultMap="discussPostMap" parameterType="map">
+        SELECT
+        <include refid="allColumns" />
+        FROM discuss_post dp WHERE 1 = 1 AND dp.status != 2
+        <if test="userId != null">
+            AND dp.user_id = #{userId}
+        </if>
+        <if test="title != null and title != ''">
+            AND dp.title LIKE CONCAT('%', #{title}, '%')
+        </if>
+        <if test="content != null and content != ''">
+            OR dp.content LIKE CONCAT('%', #{content}, '%')
+        </if>
+        <if test="type != null">
+            AND dp.type in(
+            <foreach collection="type" index="index" item="item" separator=",">
+                #{item}
+            </foreach>
+            )
+        </if>
+        <if test="createTime != null">
+            AND dp.create_time = #{createTime}
+        </if>
+        <if test="commentCount != null">
+            AND dp.comment_count = #{commentCount}
+        </if>
+        <if test="score != null">
+            AND dp.score = #{score}
+        </if>
+        <if test="coverImg != null and coverImg != ''">
+            AND dp.cover_img LIKE CONCAT('%', #{coverImg}, '%')
+        </if>
+        <if test="summary != null and summary != ''">
+            AND dp.summary LIKE CONCAT('%', #{summary}, '%')
+        </if>
+        order by create_time desc
+    </select>
+
+
+    <update id="updateCommentCount">
+        update discuss_post
+        set comment_count = #{commentCount}
+        where id = #{id}
+    </update>
+
+    <!--修改帖子类型：0-普通; 1-置顶;-->
+    <update id="updateType">
+        update discuss_post
+        set type = #{type}
+        where id = #{id}
+    </update>
+
+    <!--修改帖子状态：0-正常; 1-精华; 2-拉黑;-->
+    <update id="updateStatus">
+        update discuss_post
+        set status = #{status}
+        where id = #{id}
+    </update>
+
+    <!--修改帖子分数-->
+    <update id="updateScore">
+        update discuss_post
+        set score = #{score}
+        where id = #{id}
+    </update>
+
+</mapper>

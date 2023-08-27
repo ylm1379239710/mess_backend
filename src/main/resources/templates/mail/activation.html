@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+	<title>Mess - 激活账号</title>
+</head>
+<body>
+	<div>
+		<p>
+			<b th:text="${email}"></b>, 您好! 😃
+		</p>
+		<p>
+			非常感谢您能使用 Mess !!<br>
+			您正在注册 Mess, 这是一封激活邮件, 请右键
+			<a th:href="${url}" target="_blank">此链接</a>,选择在新标签页中打开链接
+			激活您的 Mess 账号! 🎉
+			<br>
+			您的账号为：<b th:text="${username}"></b>
+			<br>
+			您的密码为：<b th:text="${password}"></b>
+		</p>
+		<p>
+			有问题可以加作者QQ：1379239710反馈<br>
+			点击链接<a th:href="${qq}">加入群聊【失落病友交流群】：732208983</a>交流
+		</p>
+	</div>
+</body>
+</html>
