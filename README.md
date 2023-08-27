@@ -44,9 +44,12 @@ Echo 项目
 - 日志：SLF4J（日志接口） + Logback（日志实现）
 
 前端：
-我自己的话是把前端改成了VUE+element UI
 
 前端仓库：[https://gitee.com/yang-luming321/mes-front-end](http://https://gitee.com/yang-luming321/mes-front-end)
+
+丢弃了echo的前端
+- VUE
+- element UI
 
 原本是：
 - Thymeleaf
