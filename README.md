@@ -44,7 +44,7 @@ Echo 项目
 - 日志：SLF4J（日志接口） + Logback（日志实现）
 
 前端（丢弃了echo的前端）：
-- 前端仓库：[https://gitee.com/yang-luming321/mes-front-end](http://https://gitee.com/yang-luming321/mes-front-end)
+- 前端仓库：[https://gitee.com/yang-luming321/mes-front-end](https://gitee.com/yang-luming321/mes-front-end)
 - VUE
 - element UI
 
