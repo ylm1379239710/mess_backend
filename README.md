@@ -45,7 +45,8 @@ Echo 项目
 
 前端：
 我自己的话是把前端改成了VUE+element UI
-[前端](http://https://gitee.com/yang-luming321/mes-front-end)
+
+前端仓库：[https://gitee.com/yang-luming321/mes-front-end](http://https://gitee.com/yang-luming321/mes-front-end)
 
 原本是：
 - Thymeleaf
