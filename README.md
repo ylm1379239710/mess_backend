@@ -8,9 +8,8 @@
     <img width="" src="https://gitee.com/veal98/images/raw/master/img/20210211175136.png" >
 </p>
 
-> 云服务器到期了，暂时不准备续费，未上手的小伙伴可以看下面的界面展示了解本项目，所有代码在我本机上都是正常运行的，各位可以参考配套教程自己拉下去部署，并欢迎加群讨论技术问题。
 
-## 📚 项目简介
+## 📚 Echo项目简介
 
 Echo 是一套前后端不分离的开源社区系统，基于目前主流 Java Web 技术栈（SpringBoot + MyBatis + MySQL + Redis + Kafka + Elasticsearch + Spring Security + ...），并提供详细的开发文档和配套教程。包含帖子、评论、私信、系统通知、点赞、关注、搜索、用户设置、数据统计等模块。
 
@@ -23,13 +22,6 @@ Echo 是一套前后端不分离的开源社区系统，基于目前主流 Java 
 
 - Gitee Pages：[https://veal98.gitee.io/echo](https://veal98.gitee.io/echo)
 - Github Pages：[https://veal98.github.io/Echo](https://veal98.github.io/Echo)
-
-## 📖 配套教程
-
-想要自己从零开始实现这个项目或者深入理解的小伙伴，可以扫描下方二维码关注公众号『**飞天小牛肉**』回复 `Echo` 免费获取配套教程。本套教程不仅会详细解释本项目涉及的各大技术点，还会汇总相关的常见面试题，目前尚在更新中。
-
-<img width="220px" src="https://gitee.com/veal98/images/raw/master/img/20210204145531.png"  />
-
 
 
 ## 💻 核心技术栈
