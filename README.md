@@ -48,12 +48,6 @@ Echo 项目
 - VUE
 - element UI
 
-原本是：
-- Thymeleaf
-- Bootstrap 4.x
-- Jquery
-- Ajax
-
 ## 🔨 开发环境
 
 - 操作系统：Windows 10
