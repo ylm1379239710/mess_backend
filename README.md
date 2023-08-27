@@ -66,4 +66,4 @@ Echo 是一套前后端不分离的开源社区系统，基于目前主流 Java 
 
 首页：
 
-![](https://gitee.com/yang-luming321/mes-front-end/blob/master/img/shouye.png)
+![首页](https://gitee.com/yang-luming321/mes-front-end/raw/master/img/shouye.png)
