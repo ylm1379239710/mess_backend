@@ -14,15 +14,10 @@
 MESS 是在 Echo 项目的后端为基础开发的一套前后端分离的交易信息系统，基于目前主流 Java Web 技术栈（SpringBoot + MyBatis + MySQL + Redis + Kafka + Elasticsearch + Spring Security + ...），并提供详细的开发文档和配套教程。包含帖子、评论、私信、系统通知、点赞、关注、搜索、用户设置、数据统计等模块。
 
 Echo 项目
-**源码链接**：已托管在 Github 和 Gitee：
+**源码链接**：
 
 - Gitee：[https://gitee.com/veal98/Echo](https://gitee.com/veal98/Echo)
 - Github：[https://github.com/Veal98/Echo](https://github.com/Veal98/Echo)
-
-**文档地址**：文档通过 <u>Docsify + Github/Gitee Pages</u> 生成
-
-- Gitee Pages：[https://veal98.gitee.io/echo](https://veal98.gitee.io/echo)
-- Github Pages：[https://veal98.github.io/Echo](https://veal98.github.io/Echo)
 
 
 ## 💻 核心技术栈
